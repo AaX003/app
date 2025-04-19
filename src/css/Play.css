@@ -61,7 +61,7 @@
   color: #F72585;
 }
 .title {
-  font-size: 46px;
+  font-size: 2rem;
   background: linear-gradient(to right, #9D4EDD, #F72585, #4CC9F0);
   -webkit-background-clip: text;
   background-clip: text;

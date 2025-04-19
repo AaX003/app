@@ -1,12 +1,12 @@
 .project-container {
-  height: 100vh;
+  
   background: radial-gradient(ellipse at top left, #1a1a2e, #0f0f1a);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3rem;
-  font-family: 'ArcadeClass', sans-serif;
-  overflow-y: auto;
+  padding-top: 2rem;
+  font-family: monospace;
+  overflow-x: hidden;
 }
 .project-container::before,
 .project-container::after {
@@ -26,7 +26,7 @@
   z-index: 0;
 }
 .project-title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #D67FFF;
   text-shadow: 0 0 5px #D67FFF, 0 0 10px #7FFFD4;
   word-spacing: 20%;

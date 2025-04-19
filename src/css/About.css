@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 3rem;
-    font-family: 'ArcadeClass', sans-serif;
+    font-family: monospace;
     overflow-y: auto;
   }
   .about-container:before, .about-container:after {
@@ -56,64 +56,49 @@
     padding: 10px 20px;
     box-shadow: 0 0 20px cyan;
   }
-  .terminal-frame {
-    width: 50%;
-    padding: 1rem;
-    transform: translate(70px, 70px);
-    border: 2px dashed #6fd7fd;
-    border-radius: 10px;
-    background: rgba(20, 20, 60, 0.7);
-    font-family: 'Source Sans Pro', monospace;
-    color: #d0d0ff;
-    box-shadow: 0 0 15px #f0a, 0 0 30px #7f5aff;
-    backdrop-filter: blur(6px);
-    line-height: 4px;
-    transform: translate(-30px, 20px);
+  .about-title {
+    font-size: 3rem;
+    color: #D67FFF;
+    text-shadow: 0 0 5px #D67FFF, 0 0 10px #7FFFD4;
+    word-spacing: 20%;
+    animation: glitch 2s infinite;
   }
-  
-  .terminal-header {
+  .about-content {
     display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .origin, .goals, .passions {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #D67FFF;
     color: #fff;
+    padding: 20px;
+    width: 260px;
+    border-radius: 16px;
+    box-shadow: 0 0 12px #7FFFD4;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    text-align: center;
   }
-  
-  .dot {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    margin-right: 5px;
-    box-shadow: 0 0 4px white;
+  .origin:hover,
+  .goals:hover,
+  .passions:hover {
+    transform: scale(1.05) rotate(0.5deg);
+    box-shadow: 0 0 24px #D67FFF;
   }
-  
-  .pink {
-    background-color: #ff69b4;
+  .origin h3,
+  .goals h3,
+  .passions h3 {
+    color: #D67FFF;
+    margin-bottom: 10px;
   }
-  
-  .yellow {
-    background-color: #fce94f;
+  .origin p,
+  .goals p,
+  .passions p {
+    font-size: 1.2rem;
+    color: #ddeeff;
+    margin: 4px 0;
   }
-  
-  .green {
-    background-color: #8aff8a;
-  }
-  
-  .terminal-title {
-    margin-left: auto;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: #ffbfff;
-    text-shadow: 0 0 5px #fff;
-  }
-  
-  .terminal-body p {
-    margin: 0;
-    color: #e0e0ff;
-    text-shadow: 0 0 5px #9ecbff;
-    line-height: 1.4;
-  }
-  
-  .emoji {
-    margin-right: 0.5rem;
-  }
-  

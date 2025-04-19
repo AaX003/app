@@ -3,6 +3,7 @@ import '../css/Contact.css';
 import PlayScreen from "./PlayScreen";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { CiCloud } from "react-icons/ci";
 
 function Contact() {
   return (
@@ -41,6 +42,15 @@ function Contact() {
         >
           <FaLinkedin className="icon" />
           www.linkedin.com/aaxanah-hill-79991431a
+        </a>
+        <a 
+          href="mailto:bitsybaby03@icloud.com"
+          className="contact-link icloud"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CiCloud className="icon"/>
+          bitsybaby03@icloud.com
         </a>
       </div>
     </div>

@@ -14,7 +14,7 @@
 }
 
 .dialog-box {
-  font-family: 'ArcadeClass', sans-serif;
+  font-family: monospace;
   border: 3px solid #d67fff;
   padding: 2rem;
   border-radius: 20px;
@@ -29,7 +29,7 @@
 }
 .skip-btn,
 .next-btn {
-  font-family: 'ArcadeClass', sans-serif;
+  font-family: monospace;
   background-color: transparent;
   color: #7fffd4;
   border: 2px solid #7fffd4;

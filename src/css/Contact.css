@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 3rem;
-    font-family: 'ArcadeClass', sans-serif;
+    font-family: monospace;
     overflow-y: auto;
   }
   .contact-container:before, .contact-container:after {
@@ -86,22 +86,34 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
   }
-  
-  .contact-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #F72585;
-  }
   .contact-link .icon {
     font-size: 1.5rem;
   }
   .contact-link.email {
-    background-color: #F72585;
+    background-color: transparent;
+  }
+  .contact-link.email:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff167f;
   }
   .contact-link.github {
-    background-color: #4CC9F0;
+    background-color: transparent;
+  }
+  .contact-link.github:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #41ffdc;
   }
   .contact-link.linkedin {
-    background-color: #9D4EDD;
+    background-color: transparent;
   }
-  
-  
+  .contact-link.linkedin:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #78ff02;
+  }
+  .contact-link.icloud {
+    background-color: transparent;
+  }
+  .contact-link.icloud:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff6a00;
+  }
