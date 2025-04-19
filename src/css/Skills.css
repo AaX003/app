@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'ArcadeClass';
+  src: url('../fonts/ArcadeClass.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.skills-container {
+  height: 100vh;
+  background: radial-gradient(ellipse at top left, #1a1a2e, #0f0f1a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  font-family: 'ArcadeClass', sans-serif;
+  overflow-y: auto;
+}
+.skills-container:before, .skills-container:after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
+  animation: sparklePop 5s linear infinite;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.skills-dialog-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px dashed #7FFFD4;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #8A2BE2;
+  max-width: 340px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.skills-dialog-box a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  transform: scale(1.08);
+  color: #1a1a2e;
+  background-color: rgb(225, 88, 225);
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 0 20px cyan;
+  animation: 3s glitch ease-in-out infinite;
+}
+
+.skills-title {
+  font-size: 3rem;
+  background: linear-gradient(to right, #ffc0cb, #ffb6c1, #ffa6d1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px #fff0f5, 2px 2px #ac0844;
+  margin-bottom: 1.5rem;
+  animation: glitch 3s ease-in-out infinite;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  z-index: 1;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #ff63b1;
+  transition: transform 0.2s ease;
+  width: 100px;
+}
+.skill-item:hover {
+  transform: scale(1.1);
+}
+.skill-item svg {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #d67fff;
+  filter: drop-shadow(0 0 6px #7fffd4);
+}
+
+
+
+

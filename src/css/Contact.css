@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'ArcadeClass';
+    src: url('../fonts/ArcadeClass.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .contact-container {
+    height: 100vh;
+    background: radial-gradient(ellipse at top left, #1a1a2e, #0f0f1a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    font-family: 'ArcadeClass', sans-serif;
+    overflow-y: auto;
+  }
+  .contact-container:before, .contact-container:after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(white 1px, transparent 1px),
+      radial-gradient(white 1px, transparent 1px);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    animation: sparklePop 5s linear infinite;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .contact-dialog-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px dashed #7FFFD4;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px #8A2BE2;
+    max-width: 340px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .contact-dialog-box a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    transform: scale(1.08);
+    color: #1a1a2e;
+    background-color: rgb(225, 88, 225);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 20px cyan;
+    animation: 3s glitch ease-in-out infinite;
+  }
+  .contact-dialog-box a:hover {
+    transition: transform 0.2s ease, box-shadow 2s ease-in-out;
+  }
+  .contact-title {
+    font-size: 3rem;
+    color: #D67FFF;
+    text-shadow: 0 0 5px #D67FFF, 0 0 10px #7FFFD4;
+    word-spacing: 20%;
+    animation: glitch 2s infinite;
+  }
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.2rem;
+  }
+  
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 320px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  }
+  
+  .contact-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #F72585;
+  }
+  .contact-link .icon {
+    font-size: 1.5rem;
+  }
+  .contact-link.email {
+    background-color: #F72585;
+  }
+  .contact-link.github {
+    background-color: #4CC9F0;
+  }
+  .contact-link.linkedin {
+    background-color: #9D4EDD;
+  }
+  
+  
