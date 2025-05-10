@@ -8,7 +8,7 @@ function Projects() {
     <div className="project-container">
         <div className="project-dialog-box">
             <h2 className="project-title">Welcome to my Projects Page</h2>
-              <Link to="/play" element={<PlayScreen />}>Go Home</Link>
+              <Link to="/" element={<PlayScreen />}>Go Home</Link>
         </div>
         <div className="projects-list">
           <div className="project-card">

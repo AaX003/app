@@ -10,7 +10,7 @@ function Contact() {
     <div className="contact-container">
       <div className="contact-dialog-box">
         <h2 className="contact-title">Reach out</h2>
-        <Link to="/play" element={<PlayScreen />}>Go Home</Link>
+        <Link to="/" element={<PlayScreen />}>Go Home</Link>
       </div>
 
       <div className="contact-list">

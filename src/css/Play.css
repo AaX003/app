@@ -1,97 +1,101 @@
-@font-face {
-  font-family: 'ArcadeClass';
-  src: url('../fonts/ArcadeClass.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 .play-screen {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(ellipse at top left, #1A1A2E, #0F0F1A);
-  font-family: 'ArcadeClass', sans-serif;
-  overflow: hidden;
+  background: linear-gradient(to bottom right, #111111, #1a1a1a);
   position: relative;
+  padding: 2rem;
 }
+
+/* Elegant texture overlay */
 .play-screen::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
   z-index: 0;
   background-image:
-    radial-gradient(#ffffff 2px, transparent 1px),
-    radial-gradient(#7FFFD4 1.5px, transparent 1px),
-    radial-gradient(#D67FFF 1.5px, transparent 1px),
-    radial-gradient(#4CC9F0 1.2px, transparent 1px);
-  background-size: 100px 100px, 150px 150px, 120px 120px, 180px 180px;
-  background-position:
-    0 0,
-    40px 40px,
-    80px 60px,
-    100px 100px;
-  animation: sparkleFloat 5s ease-in-out infinite;
-  opacity: 0.4;
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.05;
   pointer-events: none;
 }
+
+/* Glassy welcome dialog */
 .dialog-box {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 3px dashed #7FFFD4;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 0 20px #D67FFF;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
   text-align: center;
-  width: 320px;
-  animation: floaty 2s ease-in-out infinite;
+  width: 360px;
   z-index: 1;
-  color: white;
-  backdrop-filter: blur(10px);
+  animation: floaty 5s ease-in-out infinite;
+  color: #eee;
 }
+
 .dialog-box a {
   display: block;
-  margin: 12px 0;
-  color: #88e3c5;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 20px;
   text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  transition: transform 0.2s ease, color 0.3s;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 169, 77, 0.3);
 }
+
 .dialog-box a:hover {
-  transform: scale(1.1);
-  color: #F72585;
+  transform: scale(1.05);
+  background-color: #ff6b6b;
 }
+
 .title {
-  font-size: 2rem;
-  background: linear-gradient(to right, #9D4EDD, #F72585, #4CC9F0);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #ffa94d, #ff6b6b);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px #8e45d3, 2px 2px #000;
-  margin-bottom: 20px;
-  animation: popIn 1s ease-in-out;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  animation: popIn 0.8s ease-in-out;
 }
-.ufo {
-  position: absolute;
-  top: -3%;
-  left: -100px; 
-  font-size: 90px;
-  animation: flyAcross 5s linear infinite;
+.resume-button {
+  display: inline-block;
+  background-color: #ffa94d;
+  color: #1a1a1a;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(255, 169, 77, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-/* ANIMATIONS */
-@keyframes sparkleFloat {
-  0% {
-    transform: translateY(0px) scale(1);
-    opacity: 0.4;
+
+.resume-button:hover {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+
+/* Minimal but clean hover animation */
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px) scale(1.1);
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(0px) scale(1);
-    opacity: 0.4;
+    transform: translateY(-6px);
   }
 }
+
 @keyframes popIn {
   0% {
     transform: scale(0.7);
@@ -100,26 +104,5 @@
   100% {
     transform: scale(1);
     opacity: 1;
-  }
-}
-@keyframes floaty {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes flyAcross {
-  0% {
-    left: -100px;
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(5deg);
-  }
-  100% {
-    left: 110%;
-    transform: translateY(0px) rotate(0deg);
   }
 }

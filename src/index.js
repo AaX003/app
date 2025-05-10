@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client';
 
 import reportWebVitals from './reportWebVitals';
 
-import IntroScreen from './components/IntroScreen';
 import PlayScreen from './components/PlayScreen';
 import Projects from './components/Projects';
 import About from './components/About';
@@ -20,8 +19,7 @@ root.render(
     <BrowserRouter>
         <Routes>
         <Route path="/" element={<App />}>
-        <Route index element={<IntroScreen />} /> {/* Shows at "/" */}
-        <Route path="play" element={<PlayScreen />} />
+        <Route path="/" index element={<PlayScreen />} />
         <Route path="projects" element={<Projects />} />
         <Route path="about" element={<About />} />
         <Route path="skills" element={<Skills />} />
